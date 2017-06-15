@@ -1,5 +1,5 @@
 //
-//  MarvelCell.swift
+//  HeroCell.swift
 //  Marvel-app
 //
 //  Created by Fernando Augusto de Marins on 14/06/17.
@@ -8,15 +8,13 @@
 
 import UIKit
 
-class MarvelCell: UITableViewCell {
+class HeroCell: UITableViewCell {
     @IBOutlet weak var heroImage: UIImageView!
     @IBOutlet weak var heroName: UILabel!
     
-    var heroAvatar: String? {
+    var thumbnail: UIImage? {
         didSet {
-            if let heroAvatar = heroAvatar {
-                heroImage.downloadedFrom(link: heroAvatar)
-            }
+            heroImage.image = thumbnail
         }
     }
     
